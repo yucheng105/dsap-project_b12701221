@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portrait2Music</title>
+</head>
+<body>
+    <section class="container">
+        <div id="toolbar">
+            <h1>Portrait2Music.</h1>
+            <label for="stroke">Stroke</label>
+            <select id="stroke" name="stroke">
+                <option value="#ff0000" selected>Red</option>
+                <option value="#ffff00">Yellow</option>
+                <option value="#0000ff">Blue</option>
+            </select>
+            <label for="lineWidth">Line Width</label>
+            <select id="lineWidth" name="lineWidth">
+                <option value="10">粗</option>
+                <option value="5" selected>中</option>
+                <option value="2">細</option>
+            </select>
+            <button id="clear">Clear</button>
+        </div>
+        <div class="drawing-board">
+            <canvas id="drawing-board"></canvas>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
