@@ -48,6 +48,11 @@ body {
     border-radius: 4px;
 }
 
+#toolbar select,
+#toolbar button {
+    margin-bottom: 12px;
+}
+
 /* 按鈕樣式 */
 #clear {
     background-color: #ff4757;
@@ -62,6 +67,30 @@ body {
 
 #clear:hover {
     background-color: #ff6b81;
+}
+
+#play,
+#stop {
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: filter 0.2s;
+}
+
+#play {
+    background-color: #2f9e44;
+}
+
+#stop {
+    background-color: #1c7ed6;
+}
+
+#play:hover,
+#stop:hover {
+    filter: brightness(1.1);
 }
 
 /* 4. 畫布容器：佔滿剩餘所有空間 */
