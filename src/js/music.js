@@ -37,9 +37,14 @@ async function playMusic(allStrokes, canvasWidth, canvasHeight) {
         const pointCount = stroke.points.length;
 
         stroke.points.forEach((point, index) => {
+
+            // x value determines the start time of the note
+            // y value determines the pitch
+            // line width determines the velocity
+
             const startTime = (point.x / canvasWidth) * CONFIG.DURATION;
             const yPercent = clamp(1 - (point.y / canvasHeight), 0, 1);
-            const noteIndex = Math.floor(yPercent * (CONFIG.SCALE.length - 1));
+            const noteIndex = Math.floor(yPercent * (CONFIG.SCALE.length - 1)); // map to C Major Pentatonic scale
             const note = CONFIG.SCALE[noteIndex];
             const velocity = clamp(stroke.lineWidth / 12, 0.15, 1);
 
